@@ -6,9 +6,9 @@ export default function TopNav() {
           <a className="navbar-brand d-flex align-items-center gap-2" href="#inicio">
             <span className="bw-logo" aria-hidden="true" />
             <span className="d-flex flex-column lh-1">
-              <b style={{ letterSpacing: ".2px" }}>BioWatch</b>
+              <b style={{ letterSpacing: ".2px" }}>BlueCycle Biodigester Watchh</b>
               <small style={{ opacity: 0.7, fontSize: 12 }}>
-                200L demo • Electricidad local
+                450L demo
               </small>
             </span>
           </a>
@@ -28,23 +28,23 @@ export default function TopNav() {
           <div className="collapse navbar-collapse" id="bwNav">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-1">
               <li className="nav-item">
-                <a className="nav-link" href="#problema">Problema</a>
+                <a className="nav-link" href="#problema">Problem</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#solucion">Solución</a>
+                <a className="nav-link" href="#solucion">Solution</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#proceso">Proceso</a>
+                <a className="nav-link" href="#proceso">Process</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#tecnico">Técnico</a>
+                <a className="nav-link" href="#tecnico">Technical</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#beneficios">Beneficios</a>
+                <a className="nav-link" href="#beneficios">Benefits</a>
               </li>
               <li className="nav-item mt-2 mt-lg-0 ms-lg-2">
                 <a className="btn bw-cta w-100 w-lg-auto" href="#contacto">
-                  Contactar
+                  Contact us
                 </a>
               </li>
             </ul>

@@ -6,3 +6,6 @@ Aplicación web desarrollada con React + Vite.
 
 ```bash
 npm install
+
+npm run dev
+
