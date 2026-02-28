@@ -42,37 +42,156 @@
 }
 
 
-.bw-wra{
-  background: 
-  radial-gradient(1200px 700px at 18% 10%, rgba (34,211,238,0.18), transparent 55%),
-  radial-gradient(1000px 700px at 88%, 20% rgba(16, 185, 129, 0.14), transparent 5%),
-  #07a707;
+.bw-wrap {
+  background:
+    radial-gradient(1200px 700px at 18% 10%, rgba(34, 211, 238, 0.18), transparent 55%),
+    radial-gradient(1000px 700px at 88% 20%, rgba(16, 185, 129, 0.14), transparent 55%),
+    #070a0f;
   min-height: 100vh;
 }
 
--bw-nav{
+.bw-nav {
   position: sticky;
-  top:0;
+  top: 0;
   z-index: 50;
-  background: rgba(7,10,15,0.78);
+  background: rgba(7, 10, 15, 0.78);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,0.10);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
 
--bw-brand{
+.bw-brand {
   display: flex;
   align-items: center;
   gap: 12px;
-  color:#f4f4f5;
+  color: #f4f4f5;
   text-decoration: none;
 }
 
-.bw-logo{
+.bw-logo {
   width: 40px;
-  height: 40ox;
-  border-radius: 99px;
+  height: 40px;
+  border-radius: 16px;
+  background: rgba(34, 211, 238, 0.14);
+  border: 1px solid rgba(34, 211, 238, 0.22);
+}
+
+.bw-links a {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
   text-decoration: none;
-  color:rgba(244,244,245,0.85);
+  color: rgba(244, 244, 245, 0.85);
   font-size: 14px;
-  transition: background 160ms ease-in-out;
+  transition: background 160ms ease;
+}
+
+.bw-links a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.bw-cta {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #22d3ee;
+  color: #061018;
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: none;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+.bw-cta:hover { transform: translateY(-1px); opacity: 0.95; }
+
+.bw-slide {
+  padding: 72px 0;
+  scroll-snap-align: start;
+}
+
+.bw-card {
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.bw-hero { padding: 72px 0 24px; }
+
+.bw-muted { color: rgba(244, 244, 245, 0.72); }
+
+.bw-kicker { color: rgba(34, 211, 238, 0.95); font-size: 14px; margin-bottom: 10px; }
+
+.bw-title { font-size: 40px; line-height: 1.1; margin: 0; }
+@media (min-width: 768px) { .bw-title { font-size: 52px; } }
+
+.bw-subtitle { font-size: 16px; line-height: 1.7; color: rgba(244, 244, 245, 0.75); }
+
+.bw-btn {
+  display: inline-block;
+  padding: 12px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(244, 244, 245, 0.92);
+  transition: transform 120ms ease, background 120ms ease;
+}
+.bw-btn:hover { transform: translateY(-1px); background: rgba(255, 255, 255, 0.12); }
+
+.bw-btn-primary { border: none; background: #ffffff; color: #061018; }
+
+.bw-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: var(--bw-shadow);
+  filter: saturate(1.05) contrast(1.05);
+}
+
+.bw-pill {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: rgba(244, 244, 245, 0.85);
+  background: rgba(34, 211, 238, 0.10);
+  border: 1px solid rgba(34, 211, 238, 0.16);
+}
+
+.bw-stat {
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+}
+.bw-stat .n { font-size: 26px; font-weight: 900; }
+.bw-stat .l { font-size: 13px; color: rgba(244, 244, 245, 0.70); margin-top: 4px; }
+
+.bw-input, .bw-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.18);
+  color: rgba(244, 244, 245, 0.92);
+  outline: none;
+}
+.bw-input:focus, .bw-textarea:focus {
+  border-color: rgba(34, 211, 238, 0.45);
+  box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.10);
+}
+
+.bw-footer {
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  color: rgba(244, 244, 245, 0.60);
+  font-size: 14px;
+}
+
+@media (max-width: 520px){
+  .bw-nav-links{ gap: 6px; }
+  .bw-btn{ width: 100%; }
 }
