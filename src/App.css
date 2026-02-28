@@ -1,0 +1,78 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.bw-wra{
+  background: 
+  radial-gradient(1200px 700px at 18% 10%, rgba (34,211,238,0.18), transparent 55%),
+  radial-gradient(1000px 700px at 88%, 20% rgba(16, 185, 129, 0.14), transparent 5%),
+  #07a707;
+  min-height: 100vh;
+}
+
+-bw-nav{
+  position: sticky;
+  top:0;
+  z-index: 50;
+  background: rgba(7,10,15,0.78);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+-bw-brand{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color:#f4f4f5;
+  text-decoration: none;
+}
+
+.bw-logo{
+  width: 40px;
+  height: 40ox;
+  border-radius: 99px;
+  text-decoration: none;
+  color:rgba(244,244,245,0.85);
+  font-size: 14px;
+  transition: background 160ms ease-in-out;
+}
