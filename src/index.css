@@ -7,11 +7,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* reset and normal document flow for bootstrap layout */
 html, body {
-  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* do not force full‑height or flex model */
+  box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
+*, *::before, *::after {
+  box-sizing: inherit;
 }

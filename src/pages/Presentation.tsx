@@ -2,6 +2,9 @@ import TopNav from "../components/TopNav";
 import Section from "../components/Section";
 import Footer from "../components/Footer";
 
+// configurable image URLs (placeholder unsplash links)
+import { images } from "../content/images";
+
 function FlowStep({ title, desc }: { title: string; desc: string }) {
   return (
     <div className="col-12 col-md-6">
@@ -26,7 +29,7 @@ export default function Presentation() {
       <main id="inicio" className="container bw-hero">
         <div className="row align-items-center g-4">
           <div className="col-12 col-md-6">
-            <div className="bw-kicker">The proyect</div>
+            <div className="bw-kicker">The project</div>
             <h1 className="bw-title">
               BlueCycle Biodigester Watch: Permanent Organic Waste Infrastructure
               for Coastal Communities
@@ -59,8 +62,8 @@ export default function Presentation() {
           <div className="col-12 col-md-6">
             <img
               className="bw-img"
-              alt="Imagen ilustrativa (provisional)"
-              src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?auto=format&fit=crop&w=1400&q=80"
+              alt="Hero illustration"
+              src={images.hero}
             />
           </div>
         </div>
@@ -201,8 +204,8 @@ export default function Presentation() {
           <div className="col-12 col-md-5">
             <img
               className="bw-img"
-              alt="Imagen ilustrativa (provisional)"
-              src="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=1400&q=80"
+              alt="System illustration"
+              src={images.solution}
             />
           </div>
         </div>
@@ -357,6 +360,21 @@ export default function Presentation() {
         </div>
       </Section>
 
+      {/* optional image gallery */}
+      <Section
+        id="gallery"
+        title="Photo gallery"
+        subtitle="Sneak peek at prototype, sensors and slurry ice."
+      >
+        <div className="row g-3">
+          {images.gallery.map((img, idx) => (
+            <div key={idx} className="col-12 col-md-4">
+              <img className="bw-img" src={img.src} alt={img.alt} />
+            </div>
+          ))}
+        </div>
+      </Section>
+
       <Section
         id="benchmark"
         title="Benchmark: SIMEPRODE (Monterrey)"
@@ -378,9 +396,9 @@ export default function Presentation() {
 
           <div className="col-12 col-md-6">
             <img
-              className="bw-img"
-              alt="Imagen ilustrativa (provisional)"
-              src="public/sime.jpg"
+              className="bw-img-wide"
+              alt="Benchmark example"
+              src={images.benchmark}
             />
           </div>
         </div>

@@ -117,7 +117,16 @@
 
 /* ===== Hero ===== */
 .bw-hero{
-  padding: 54px 0 26px;
+  padding: 64px 0 32px;
+  /* subtle overlay gradient to lift text from background */
+  position: relative;
+}
+.bw-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(34,211,238,0.08), transparent 70%);
+  pointer-events: none;
 }
 .bw-kicker{
   font-weight: 900;
@@ -152,12 +161,41 @@
 
 .bw-img{
   width: 100%;
-  height: 380px;
+  height: 320px;  /* uniform fixed height */
   object-fit: cover;
   border-radius: var(--bw-radius);
   border: 1px solid rgba(255,255,255,.10);
   box-shadow: var(--bw-shadow);
   filter: saturate(1.05) contrast(1.05);
+}
+
+/* wider/diagram-type images that should be contained rather than cropped */
+.bw-img-wide {
+  width: 100%;
+  height: 360px;
+  object-fit: contain;
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--bw-radius);
+  display: block;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .bw-img {
+    height: 240px;
+  }
+  .bw-img-wide {
+    height: 240px;
+  }
+}
+
+/* card hover lift for a little interactivity */
+.bw-card{
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.bw-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 20px 50px rgba(0,0,0,.35);
 }
 
 /* ===== Section wrapper ===== */
