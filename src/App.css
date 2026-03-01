@@ -195,3 +195,7 @@
   .bw-nav-links{ gap: 6px; }
   .bw-btn{ width: 100%; }
 }
+
+.bw-muted {
+  white-space: pre-line;
+}

@@ -6,7 +6,7 @@ export default function TopNav() {
           <a className="navbar-brand d-flex align-items-center gap-2" href="#inicio">
             <span className="bw-logo" aria-hidden="true" />
             <span className="d-flex flex-column lh-1">
-              <b style={{ letterSpacing: ".2px" }}>BlueCycle Biodigester Watchh</b>
+              <b style={{ letterSpacing: ".2px" }}>BlueCycle Biodigester Watch</b>
               <small style={{ opacity: 0.7, fontSize: 12 }}>
                 450L demo
               </small>

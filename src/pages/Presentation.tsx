@@ -10,7 +10,8 @@ function FlowStep({ title, desc }: { title: string; desc: string }) {
     <div className="col-12 col-md-6">
       <div className="bw-card p-4 h-100">
         <div style={{ fontWeight: 900 }}>{title}</div>
-        <div className="bw-muted mt-2">{desc}</div>
+        {/* allow newlines in the description by preserving whitespace */}
+        <div className="bw-muted mt-2" style={{ whiteSpace: 'pre-line' }}>{desc}</div>
       </div>
     </div>
   );
@@ -31,7 +32,7 @@ export default function Presentation() {
           <div className="col-12 col-md-6">
             <div className="bw-kicker">The project</div>
             <h1 className="bw-title">
-              BlueCycle Biodigester Watch: Permanent Organic Waste Infrastructure
+              BlueCycle Biodigester Watch: Organic Waste Infrastructure
               for Coastal Communities
             </h1>
             <p className="bw-subtitle mt-3">
@@ -78,7 +79,7 @@ export default function Presentation() {
           <div className="col-12 col-md-4">
             <div className="bw-stat">
               <div className="n">2) Local energy</div>
-              <div className="l">Biogas → electricity for on-site use</div>
+              <div className="l">Biogas -- electricity for on-site use</div>
             </div>
           </div>
           <div className="col-12 col-md-4">
@@ -93,8 +94,10 @@ export default function Presentation() {
       <Section
         id="problema"
         title="Problem"
-        subtitle="In coastal fishing communities, organic waste is dumped in the sea: it pollutes, smells, and generates environmental impacts."
-      >
+        subtitle="213,000+ people in Mexico depend directly on fishing for their livelihood.
+            Lack of proper cold chain & logistics leads to up to 35% post-harvest fish loss globally.
+            Limited access to ice, energy, and infrastructure reduces income and product quality.
+            In coastal fishing communities, organic waste is dumped in the sea: it pollutes, smells, and generates environmental impacts.">
         <div className="row g-4">
           <div className="col-12 col-md-6">
             <div className="bw-card p-4">
@@ -137,7 +140,7 @@ export default function Presentation() {
       <Section
         id="solucion"
         title="Solution (complete system)"
-        subtitle="We are not selling “a tank”. We are proposing a fixed, operable infrastructure installed on-site for docks/markets."
+        subtitle=" We are proposing a fixed, operable infrastructure installed on-site for docks/markets."
       >
         <div className="row g-4">
           <div className="col-12 col-md-7">
@@ -171,7 +174,7 @@ export default function Presentation() {
                 <div className="col-12 col-md-6">
                   <div className="bw-stat">
                     <div className="n">Energy generation</div>
-                    <div className="l">Biogas → generator for on-site electricity</div>
+                    <div className="l">Biogas -- generator for on-site electricity</div>
                   </div>
                 </div>
 
@@ -214,7 +217,7 @@ export default function Presentation() {
       <Section
         id="proceso"
         title="How it works"
-        subtitle="A simple, defensible flow so the jury sees a system (not just a biodigester)."
+        subtitle="From waste to energy."
       >
         <div className="row g-3">
           <FlowStep
@@ -223,7 +226,9 @@ export default function Presentation() {
           />
           <FlowStep
             title="2) Mixing & controlled feeding"
-            desc="Co-digestion starts with low fish ratio (10–20%) and higher vegetable content for stability."
+            desc={`Fish and vegetable waste are placed in separate sealed containers for independent control.
+Materials are blended in a controlled mixing chamber before entering the digester.
+Prevents ammonia shock and avoids “dumping everything at once.”`}
           />
           <FlowStep
             title="3) Anaerobic digestion"
@@ -239,8 +244,12 @@ export default function Presentation() {
           />
           <FlowStep
             title="6) Slurry ice production"
-            desc="Recovered energy powers slurry ice to strengthen the cold chain and reduce food spoilage."
-          />
+              desc="Biogas powers a small on-site generator.
+              Electricity supports slurry ice production to strengthen the cold chain.
+              Estimated yield:
+              20 kg fish → 8–12 m³ biogas
+              60 kg vegetables → 3–6 m³ biogas
+              Converts waste → energy → cold preservation."       />
           <FlowStep
             title="7) Digestate management"
             desc="Separate liquid/solid fractions for controlled use as biofertilizer (with clear usage guidance)."
@@ -250,15 +259,17 @@ export default function Presentation() {
 
       <Section
         id="tecnico"
-        title="Technical specifications (demo pilot)"
-        subtitle="Initial design values for the 200L prototype (to be updated as interviews and the final model are validated)."
+        title="Technical specifications "
+        subtitle="Initial design values for the 450L prototype "
       >
         <div className="row g-3">
           <div className="col-12 col-md-3">
             <div className="bw-card p-4 h-100">
-              <div style={{ fontWeight: 900 }}>Daily input</div>
-              <div className="bw-muted mt-2">
-                {fishKg} kg fish + {vegKg} kg vegetable (co-digestion baseline).
+              <div style={{ fontWeight: 900 }}>Input</div>
+              <div className="bw-muted mt-2" style={{ whiteSpace: 'pre-line' }}>
+                {`${fishKg} kg fish + ${vegKg} kg vegetables
+
+Controlled co-digestion baseline`}
               </div>
             </div>
           </div>
@@ -266,27 +277,34 @@ export default function Presentation() {
           <div className="col-12 col-md-3">
             <div className="bw-card p-4 h-100">
               <div style={{ fontWeight: 900 }}>Reactor</div>
-              <div className="bw-muted mt-2">
-                Sealed {digesterL} L biodigester (demo pilot), designed as a fixed
-                on-site installation.
+              <div className="bw-muted mt-2" style={{ whiteSpace: 'pre-line' }}>
+                {`Sealed ${digesterL} L biodigester
+
+Fixed, on-site installation (demo pilot)`}
               </div>
             </div>
           </div>
 
           <div className="col-12 col-md-3">
             <div className="bw-card p-4 h-100">
-              <div style={{ fontWeight: 900 }}>Sensors</div>
-              <div className="bw-muted mt-2">
-                pH, temperature, pressure/flow (simple app alerts).
+              <div style={{ fontWeight: 900 }}>Monitoring</div>
+              <div className="bw-muted mt-2" style={{ whiteSpace: 'pre-line' }}>
+                {`pH, temperature, pressure/flow
+
+App-based real-time alerts`}
               </div>
             </div>
           </div>
 
           <div className="col-12 col-md-3">
             <div className="bw-card p-4 h-100">
-              <div style={{ fontWeight: 900 }}>Outputs</div>
-              <div className="bw-muted mt-2">
-                Biogas → generator for on-site electricity + digestate (guided use) + slurry ice support (phase 3).
+              <div style={{ fontWeight: 900 }}>Energy Output</div>
+              <div className="bw-muted mt-2" style={{ whiteSpace: 'pre-line' }}>
+                {`Biogas → on-site electricity
+
+Supports slurry ice production
+
+Digestate for guided use`}
               </div>
             </div>
           </div>
@@ -295,21 +313,21 @@ export default function Presentation() {
         <div className="row g-3 mt-3">
           <div className="col-12 col-md-8">
             <div className="bw-card p-4">
-              <div style={{ fontWeight: 900 }}>Safety & operation</div>
+              <div style={{ fontWeight: 900 }}>Safety</div>
               <ul className="bw-muted mt-2 mb-0">
-                <li>Small, consistent feeding (avoid “dumping everything at once”).</li>
-                <li>Basic H2S filtration + condensate trap.</li>
-                <li>Logbook + traceability for evidence and operational stability.</li>
+                <li>Small, consistent feeding</li>
+                <li>Basic H₂S filtration</li>
+                <li>Condensate trap</li>
               </ul>
             </div>
           </div>
 
           <div className="col-12 col-md-4">
             <div className="bw-card p-4 h-100">
-              <div style={{ fontWeight: 900 }}>Note</div>
-              <div className="bw-muted mt-2">
-                Images and some parameters are provisional. The goal is to validate
-                technical and regulatory feasibility through expert interviews.
+              <div style={{ fontWeight: 900 }}>Validation</div>
+              <div className="bw-muted mt-2" style={{ whiteSpace: 'pre-line' }}>
+                {`Digital logbook & traceability
+                Parameters refined through expert and regulatory review`}
               </div>
             </div>
           </div>
@@ -319,12 +337,12 @@ export default function Presentation() {
       <Section
         id="beneficios"
         title="Benefits (why this is viable)"
-        subtitle="What matters: impact + operability + evidence (not just a nice idea)."
+        subtitle="What matters: impact + operability + evidence."
       >
         <div className="row g-3">
           {[
             ["Environmental", "Diverts organic waste so it does not reach the ocean and reduces local impacts."],
-            ["Energy", "Converts biogas into on-site electricity to reduce conventional consumption."],
+            ["Energy", "Converts biogas into on-site electricity to reduce consumption."],
             ["Economic", "Lower informal disposal costs and potential savings through recovered energy and reduced spoilage."],
             ["Operational", "Sensors + app: alerts, logbook, and metrics to prove impact to the jury."],
           ].map(([t, d]) => (
@@ -340,7 +358,7 @@ export default function Presentation() {
 
       <Section
         id="app"
-        title="App + sensors (what makes us different)"
+        title="App + sensors"
         subtitle="The app is not decoration: it makes the system operable and produces measurable evidence."
       >
         <div className="row g-3">
